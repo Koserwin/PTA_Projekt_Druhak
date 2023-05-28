@@ -1,0 +1,116 @@
+﻿<Window x:Class="PTA_Projekt.Hraci_pole"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PTA_Projekt"
+        mc:Ignorable="d"
+        WindowState="Maximized"
+        
+        Title="MainWindow" Height="800" Width="1500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="190"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions >
+            <ColumnDefinition Width="540"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="540"/>
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Column="1" Grid.Row="1" Background="LightGray">
+
+            <Button x:Name="B1_p" Content="" FontSize="72" Click="Button_Click" BorderThickness="2" BorderBrush="black" />
+        </Border>
+
+        <Border Grid.Column="2" Grid.Row="1" Background="LightGray">
+
+            <Button  x:Name="B2_p" Content="" FontSize="72" Click="Button_Click_1" BorderThickness="2" BorderBrush="black"/>
+        </Border>
+
+        <Border Grid.Column="3" Grid.Row="1" Background="LightGray">
+
+            <Button  x:Name="B3_p" Content="" FontSize="72" Click="Button_Click_2" BorderThickness="2" BorderBrush="black"/>
+        </Border>
+
+        <Border Grid.Column="1" Grid.Row="2" Background="LightGray">
+
+            <Button  x:Name="B4_p" Content="" FontSize="72" Click="Button_Click_3" BorderThickness="2" BorderBrush="black"/>
+
+
+        </Border>
+
+
+        <Border Grid.Column="2" Grid.Row="2" Background="LightGray">
+
+            <Button  x:Name="B5_p" Content="" FontSize="72" Click="Button_Click_4" BorderThickness="2" BorderBrush="black"/>
+        </Border>
+
+
+        <Border Grid.Column="3" Grid.Row="2" Background="LightGray">
+
+            <Button  x:Name="B6_p" Content="" FontSize="72" Click="Button_Click_5"  BorderThickness="2" BorderBrush="black"/>
+        </Border>
+
+
+        <Border Grid.Column="1" Grid.Row="3" Background="LightGray">
+
+            <Button  x:Name="B7_p" Content="" FontSize="72" Click="Button_Click_6" BorderThickness="2" BorderBrush="black"/>
+        </Border>
+
+
+        <Border Grid.Column="2" Grid.Row="3" Background="LightGray">
+
+            <Button  x:Name="B8_p" Content="" FontSize="72" Click="Button_Click_7" BorderThickness="2" BorderBrush="black"/>
+        </Border>
+
+
+        <Border Grid.Column="3" Grid.Row="3" Background="LightGray">
+
+            <Button  x:Name="B9_p" Content="" FontSize="72" Click="Button_Click_8" BorderThickness="2" BorderBrush="black"/>
+        </Border>
+
+        <Button x:Name="New_game" Height="30" Content="New game" Click="New_game_Click" Margin="0,65,0,0" Grid.Row="4" Grid.Column="1" VerticalAlignment="Top"
+            />
+
+
+        <Button x:Name="Quit_game" Height="30" Content="Quit game" Click="Quit_game_Click" Margin="0,65,0,0" Grid.Row="4" Grid.Column="3" VerticalAlignment="Top"
+            />
+
+        <Line x:Name="C_147" Grid.Column="1" X1="76" Y1="30" X2="76" Y2="440" Stroke="Black" StrokeThickness="4" Margin="0,0,0,10" Grid.RowSpan="3" Grid.Row="1" Visibility="Collapsed"/>
+        <Line x:Name="C_258" Grid.Column="2" X1="76" Y1="30" X2="76" Y2="440" Stroke="Black" StrokeThickness="4" Margin="0,0,0,10" Grid.RowSpan="3" Grid.Row="1" Visibility="Collapsed"/>
+        <Line x:Name="C_369" Grid.Column="3" X1="76" Y1="30" X2="76" Y2="440" Stroke="Black" StrokeThickness="4" Margin="0,0,0,10" Grid.RowSpan="3" Grid.Row="1" Visibility="Collapsed"/>
+        <Line x:Name="C_123" Grid.Row="1" X1="26" Y1="81" X2="433" Y2="81" Stroke="Black" StrokeThickness="4" Margin="0,0,0,10" Grid.ColumnSpan="3" Grid.Column="1" Visibility="Collapsed"/>
+        <Line x:Name="C_456" Grid.Row="2" X1="26" Y1="81" X2="433" Y2="81" Stroke="Black" StrokeThickness="4" Margin="0,0,0,10" Grid.ColumnSpan="3" Grid.Column="1" Visibility="Collapsed"/>
+        <Line x:Name="C_789" Grid.Row="3" X1="26" Y1="81" X2="433" Y2="81" Stroke="Black" StrokeThickness="4" Margin="0,0,0,10" Grid.ColumnSpan="3" Grid.Column="1" Visibility="Collapsed"/>
+        <Line x:Name="C_159" Grid.Row="1" Grid.RowSpan="3" X1="20" Y1="20" X2="440" Y2="450" Stroke="Black" StrokeThickness="4" Margin="0,0,0,10" Grid.ColumnSpan="3" Grid.Column="1" Visibility="Collapsed"/>
+        <Line x:Name="C_357" Grid.Row="1" Grid.RowSpan="3" X1="20" Y1="448" X2="440" Y2="20" Stroke="Black" StrokeThickness="4" Margin="0,0,0,10" Grid.ColumnSpan="3" Grid.Column="1" Visibility="Collapsed"/>
+
+
+
+        <Label Content="P1  0 : 0  P2" x:Name="Score" FontSize="32"  HorizontalAlignment="Center" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" Height="50" Margin="0,55,0,0" VerticalAlignment="Top"/>
+
+
+        <Button x:Name="Change_ornament" Height="30" Content="Change symbol" Click="Change_ornament_Click" Margin="0,119,0,0" Grid.Row="4" Grid.Column="2" VerticalAlignment="Top"
+            />
+
+
+        <Rectangle Height="300" Fill="white" Stroke="Gold" StrokeThickness="20" RadiusX="10" RadiusY="10" Margin="0,144,0,0" Grid.RowSpan="3" Grid.Row="1" HorizontalAlignment="Center" Width="300" VerticalAlignment="Top"/>
+        <Rectangle Height="300" Fill="white" Stroke="Gold" StrokeThickness="20" RadiusX="10" RadiusY="10" Margin="0,144,0,0" Grid.RowSpan="3" Grid.Row="1" HorizontalAlignment="Center" Width="300" VerticalAlignment="Top" Grid.Column="4"/>
+
+
+        <Image x:Name="Hrac_img" Source="OBR\1.png" Height="250" Margin="0,25,0,0" Grid.RowSpan="2" Grid.Row="2" HorizontalAlignment="Center" Width="250" VerticalAlignment="Top"/>
+        <Image x:Name="Protivnik_img" Source="OBR\PC.jpg" Height="250" Grid.RowSpan="2" Grid.Row="2" HorizontalAlignment="Center" Width="250" VerticalAlignment="Top" Grid.Column="4" Margin="0,19,0,0"/>
+        <Image x:Name="Protivnik_img2" Source="OBR\1.png" Height="250" Margin="0,25,0,0" Grid.RowSpan="2" Grid.Row="2" HorizontalAlignment="Center" Width="250" VerticalAlignment="Top" Grid.Column="4" Visibility="Collapsed"/>
+
+        <Label x:Name="znak_L_H" Content="X" FontSize="100" Height="120" Width="85" Margin="0,0,223,28" Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Right" />
+        <Label x:Name="znak_L_O" Content="O" FontSize="100" Height="120" Width="85" Margin="228,0,0,0" Grid.Row="1" VerticalAlignment="Top" Grid.Column="4" HorizontalAlignment="Left" />
+
+    </Grid>
+</Window>
