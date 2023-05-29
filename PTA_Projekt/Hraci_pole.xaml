@@ -5,9 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PTA_Projekt"
         mc:Ignorable="d"
-        WindowState="Maximized"
+        WindowStartupLocation="CenterScreen"
         
-        Title="MainWindow" Height="800" Width="1500">
+        
+        Title="" Height="810" Width="1550" ResizeMode="CanMinimize">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="150"/>
@@ -101,16 +102,16 @@
             />
 
 
-        <Rectangle Height="300" Fill="white" Stroke="Gold" StrokeThickness="20" RadiusX="10" RadiusY="10" Margin="0,144,0,0" Grid.RowSpan="3" Grid.Row="1" HorizontalAlignment="Center" Width="300" VerticalAlignment="Top"/>
-        <Rectangle Height="300" Fill="white" Stroke="Gold" StrokeThickness="20" RadiusX="10" RadiusY="10" Margin="0,144,0,0" Grid.RowSpan="3" Grid.Row="1" HorizontalAlignment="Center" Width="300" VerticalAlignment="Top" Grid.Column="4"/>
+        <Rectangle Fill="white" Stroke="Gold" StrokeThickness="20" RadiusX="10" RadiusY="10" Margin="0,0,0,10" Grid.RowSpan="3" Grid.Row="1" HorizontalAlignment="Center" Width="300" Height="300" VerticalAlignment="Bottom"/>
+        <Rectangle Height="300" Fill="white" Stroke="Gold" StrokeThickness="20" RadiusX="10" RadiusY="10" Margin="0,0,0,10" Grid.RowSpan="3" Grid.Row="1" HorizontalAlignment="Center" Width="300" VerticalAlignment="Bottom" Grid.Column="4"/>
 
 
-        <Image x:Name="Hrac_img" Source="OBR\1.png" Height="250" Margin="0,25,0,0" Grid.RowSpan="2" Grid.Row="2" HorizontalAlignment="Center" Width="250" VerticalAlignment="Top"/>
-        <Image x:Name="Protivnik_img" Source="OBR\PC.jpg" Height="250" Grid.RowSpan="2" Grid.Row="2" HorizontalAlignment="Center" Width="250" VerticalAlignment="Top" Grid.Column="4" Margin="0,19,0,0"/>
-        <Image x:Name="Protivnik_img2" Source="OBR\1.png" Height="250" Margin="0,25,0,0" Grid.RowSpan="2" Grid.Row="2" HorizontalAlignment="Center" Width="250" VerticalAlignment="Top" Grid.Column="4" Visibility="Collapsed"/>
+        <Image x:Name="Hrac_img" Source="OBR\1.png" Height="250" Margin="0,0,0,33" Grid.RowSpan="2" Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="250"/>
+        <Image x:Name="Protivnik_img" Source="OBR\PC.jpg" Height="250" Grid.RowSpan="2" Grid.Row="2" HorizontalAlignment="Center" Width="250" VerticalAlignment="Bottom" Grid.Column="4" Margin="0,0,0,39"  Visibility="Collapsed"/>
+        <Image x:Name="Protivnik_img2" Source="OBR\1.png" Height="250" Margin="0,0,0,33" Grid.RowSpan="2" Grid.Row="2" HorizontalAlignment="Center" Width="250" VerticalAlignment="Bottom" Grid.Column="4" />
 
-        <Label x:Name="znak_L_H" Content="X" FontSize="100" Height="120" Width="85" Margin="0,0,223,28" Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Right" />
-        <Label x:Name="znak_L_O" Content="O" FontSize="100" Height="120" Width="85" Margin="228,0,0,0" Grid.Row="1" VerticalAlignment="Top" Grid.Column="4" HorizontalAlignment="Left" />
+        <Label x:Name="znak_L_H" Content="X" FontSize="100" Height="120" Margin="232,0,0,28" Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="85" />
+        <Label x:Name="znak_L_O" Content="O" FontSize="100" Height="120" Width="85" Margin="0,0,228,0" Grid.Row="1" VerticalAlignment="Top" Grid.Column="4" HorizontalAlignment="Right" />
 
     </Grid>
 </Window>
