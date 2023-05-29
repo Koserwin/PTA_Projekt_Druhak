@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,20 +14,32 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml.Linq;
 
 namespace PTA_Projekt
 {
+    
+    
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
-        public string obrazek = @"OBR\1.png";
+        public static int win_b = 0;
+        public static int win_g = 0;
+        
         public string rezim = "";
         public MainWindow()
         {
             InitializeComponent();
+            
+           
+            
+
         }
+        
+
+        
 
         
 
@@ -34,6 +48,8 @@ namespace PTA_Projekt
             rezim = "NoobBot";
             Hraci_pole h = new Hraci_pole(rezim);
             h.ShowDialog();
+            
+
         }
 
         private void TTT_b_Click(object sender, RoutedEventArgs e)
@@ -41,6 +57,8 @@ namespace PTA_Projekt
             rezim = "GoodBot";
             Hraci_pole h = new Hraci_pole(rezim);
             h.ShowDialog();
+
+            
         }
 
         private void TTT_f_Click(object sender, RoutedEventArgs e)
@@ -50,19 +68,6 @@ namespace PTA_Projekt
             h.ShowDialog();
         }
 
-        private void Login_Click(object sender, RoutedEventArgs e)
-        {
-            //Login l = new Login();
-            //l.ShowDialog();
-
-            
-
-        }
-
-        private void Edit_Click(object sender, RoutedEventArgs e)
-        {
-            Edit ed = new Edit();
-            ed.ShowDialog();
-        }
+        
     }
 }

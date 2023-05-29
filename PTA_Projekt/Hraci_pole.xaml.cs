@@ -49,12 +49,17 @@ namespace PTA_Projekt
         private int pocet_poli = 0;
         private string znak = "O";
         private string znak_oponent = "X";
+        public int win_ba = 0;
+        public int win_go = 0;
+        
+        
 
 
         public Hraci_pole(string rezim)
         {
 
             rezim_ = rezim;
+            
             InitializeComponent();
 
             if (rezim_ == "Friend")
@@ -91,6 +96,11 @@ namespace PTA_Projekt
 
             Kontrola();
             Hrac();
+            if (win)
+            {
+
+                Kontrola_t();
+            }
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -114,6 +124,11 @@ namespace PTA_Projekt
             }
             Kontrola();
             Hrac();
+            if (win)
+            {
+
+                Kontrola_t();
+            }
         }
 
 
@@ -137,7 +152,12 @@ namespace PTA_Projekt
                 F3 = true;            
             }
             Kontrola();
-            Hrac(); 
+            Hrac();
+            if (win)
+            {
+
+                Kontrola_t();
+            }
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
@@ -160,6 +180,11 @@ namespace PTA_Projekt
             }
             Kontrola();
             Hrac();
+            if (win)
+            {
+
+                Kontrola_t();
+            }
         }
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
@@ -182,6 +207,11 @@ namespace PTA_Projekt
             }
             Kontrola();
             Hrac();
+            if (win)
+            {
+
+                Kontrola_t();
+            }
 
         }
 
@@ -206,6 +236,11 @@ namespace PTA_Projekt
             }
             Kontrola();
             Hrac();
+            if (win)
+            {
+
+                Kontrola_t();
+            }
         }
 
         private void Button_Click_6(object sender, RoutedEventArgs e)
@@ -227,7 +262,12 @@ namespace PTA_Projekt
                 F7 = true;
             }
             Kontrola();
-            Hrac();
+            Hrac(); 
+            if (win)
+            {
+
+                Kontrola_t();
+            }
         }
 
         private void Button_Click_7(object sender, RoutedEventArgs e)
@@ -251,6 +291,11 @@ namespace PTA_Projekt
             Kontrola();
 
             Hrac();
+            if (win)
+            {
+
+                Kontrola_t();
+            }
         }
 
         private void Button_Click_8(object sender, RoutedEventArgs e)
@@ -272,6 +317,11 @@ namespace PTA_Projekt
             }
             Kontrola();
             Hrac();
+            if (win)
+            {
+
+                Kontrola_t();
+            }
         }
 
         private void Hrac()
@@ -338,7 +388,17 @@ namespace PTA_Projekt
             kolo++;
             pocet_poli = 0;
             Change_ornament.IsEnabled = true;
-            Hrac();
+            B1_p.Foreground = Brushes.Black;
+            B2_p.Foreground = Brushes.Black;
+            B3_p.Foreground = Brushes.Black;
+            B4_p.Foreground = Brushes.Black;
+            B5_p.Foreground = Brushes.Black;
+            B6_p.Foreground = Brushes.Black;
+            B7_p.Foreground = Brushes.Black;
+            B8_p.Foreground = Brushes.Black;
+            B9_p.Foreground = Brushes.Black;
+
+
 
             if (kolo % 2 == 0)
             {
@@ -372,7 +432,12 @@ namespace PTA_Projekt
             
         }
 
+        private void Kontrola_t()
+        {
+            znak_L_H.Foreground = Brushes.Black;
+            znak_L_O.Foreground = Brushes.Black;
 
+        }
         private void Kontrola()
         {
             Change_ornament.IsEnabled = false;
@@ -391,42 +456,59 @@ namespace PTA_Projekt
 
             if (P1 == "X" && P2 == "X" && P3 == "X" || P1 == "O" && P2 == "O" && P3 == "O")
             {
-                C_123.Visibility = Visibility.Visible;
+                B1_p.Foreground = Brushes.Green;
+                B2_p.Foreground = Brushes.Green;
+                B3_p.Foreground = Brushes.Green;
+
                 win = true;
             }else if ((P4 == "X" && P5 == "X" && P6 == "X") || (P4 == "O" && P5 == "O" && P6 == "O"))
             {
                 win = true;
-                C_456.Visibility = Visibility.Visible;
+                B4_p.Foreground = Brushes.Green;
+                B5_p.Foreground = Brushes.Green;
+                B6_p.Foreground = Brushes.Green;
             }
             else if(P7 == "X" && P8 == "X" && P9 == "X" || P7 == "O" && P8 == "O" && P9 == "O")
             {
                 win = true;
-                C_789.Visibility = Visibility.Visible;
+                B7_p.Foreground = Brushes.Green;
+                B8_p.Foreground = Brushes.Green;
+                B9_p.Foreground = Brushes.Green;
             }
             else if(P1 == "X" && P4 == "X" && P7 == "X" || P1 == "O" && P4 == "O" && P7 == "O")
             {
                 win = true;
-                C_147.Visibility = Visibility.Visible;
+                B1_p.Foreground = Brushes.Green;
+                B4_p.Foreground = Brushes.Green;
+                B7_p.Foreground = Brushes.Green;
             }
             else if(P2 == "X" && P5 == "X" && P8 == "X" || P2 == "O" && P5 == "O" && P8 == "O")
             {
                 win = true;
-                C_258.Visibility = Visibility.Visible;
+                B2_p.Foreground = Brushes.Green;
+                B5_p.Foreground = Brushes.Green;
+                B8_p.Foreground = Brushes.Green;
             }
             else if(P3 == "X" && P6 == "X" && P9 == "X" || P3 == "O" && P6 == "O" && P9 == "O")
             {
                 win = true;
-                C_369.Visibility = Visibility.Visible;
+                B3_p.Foreground = Brushes.Green;
+                B6_p.Foreground = Brushes.Green;
+                B9_p.Foreground = Brushes.Green;
             }
             else if(P1 == "X" && P5 == "X" && P9 == "X" || P1 == "O" && P5 == "O" && P9 == "O")
             {
                 win = true;
-                C_159.Visibility = Visibility.Visible;
+                B1_p.Foreground = Brushes.Green;
+                B5_p.Foreground = Brushes.Green;
+                B9_p.Foreground = Brushes.Green;
             }
             else if(P3 == "X" && P5 == "X" && P7 == "X" || P3 == "O" && P5 == "O" && P7 == "O")
             {
                 win = true;
-                C_357.Visibility = Visibility.Visible;
+                B3_p.Foreground = Brushes.Green;
+                B5_p.Foreground = Brushes.Green;
+                B7_p.Foreground = Brushes.Green;
             }
 
 
@@ -460,10 +542,26 @@ namespace PTA_Projekt
                 if (player == 1)
                 {
                     p1_win++;
-                    
-                    
 
-                }else
+                    if (rezim_ == "NoobBot")
+                    {
+                        win_ba++;
+                        
+
+                    }
+                    if (rezim_ == "GoodBot")
+                    {
+
+                        win_go++;
+
+                        
+
+
+                    }
+
+
+                }
+                else
                 {
                     p2_win++;
                     
@@ -473,6 +571,7 @@ namespace PTA_Projekt
                 Score.Content = $"P1  {p1_win} : {p2_win}  P2";
 
                 
+
             }
 
             
@@ -1207,5 +1306,8 @@ namespace PTA_Projekt
 
             }
         }
+
+        
+
     }
 }
