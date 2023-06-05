@@ -30,24 +30,8 @@ namespace PTA_Projekt
         private int player = 1;
         private int p1_win = 0;
         private int p2_win = 0;
-        private bool F1 = false;
-        private bool F2 = false;
-        private bool F3 = false;
-        private bool F4 = false;
-        private bool F5 = false;
-        private bool F6 = false;
-        private bool F7 = false;
-        private bool F8 = false;
-        private bool F9 = false;
-        private string P1 = "f";
-        private string P2 = "f";
-        private string P3 = "f";
-        private string P4 = "f";
-        private string P5 = "f";
-        private string P6 = "f";
-        private string P7 = "f";
-        private string P8 = "f";
-        private string P9 = "f";
+        private bool F1,F2, F3, F4, F5, F6, F7, F8, F9 = false;
+        private string P1,P2, P3, P4, P5, P6, P7, P8, P9 = "f";
         private bool win = false;
         private string rezim_;
         private int pocet_poli = 0;
@@ -113,26 +97,21 @@ namespace PTA_Projekt
                 if (player == 1)
                 {
                     B1_p.Content = znak_oponent;
-                    B1_p.IsHitTestVisible = false;
 
                 }
                 else
                 {
                     B1_p.Content = znak;
-                    B1_p.IsHitTestVisible = false;
 
                 }
                 F1 = true;
-                
+                    B1_p.IsHitTestVisible = false;
+
             }
 
             Kontrola();
             Hrac();
-            if (win)
-            {
-
-                Kontrola_t();
-            }
+           
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -142,25 +121,20 @@ namespace PTA_Projekt
                 if (player == 1)
                 {
                     B2_p.Content = znak_oponent;
-                    B2_p.IsHitTestVisible = false;
 
                 }
                 else
                 {
                     B2_p.Content = znak;
-                    B2_p.IsHitTestVisible = false;
 
                 }
                 F2 = true;
+                B2_p.IsHitTestVisible = false;
 
             }
             Kontrola();
             Hrac();
-            if (win)
-            {
-
-                Kontrola_t();
-            }
+            
         }
 
 
@@ -171,25 +145,21 @@ namespace PTA_Projekt
                 if (player == 1)
                 {
                     B3_p.Content = znak_oponent;
-                    B3_p.IsHitTestVisible = false;
 
                 }
                 else
                 {
                     B3_p.Content = znak;
-                    B3_p.IsHitTestVisible = false;
 
 
                 }
-                F3 = true;            
+                F3 = true;
+                B3_p.IsHitTestVisible = false;
+
             }
             Kontrola();
             Hrac();
-            if (win)
-            {
-
-                Kontrola_t();
-            }
+            
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
@@ -199,24 +169,20 @@ namespace PTA_Projekt
                 if (player == 1)
                 {
                     B4_p.Content = znak_oponent;
-                    B4_p.IsHitTestVisible = false;
 
                 }
                 else
                 {
                     B4_p.Content = znak;
-                    B4_p.IsHitTestVisible = false;
 
                 }
                 F4 = true;
+                B4_p.IsHitTestVisible = false;
+
             }
             Kontrola();
             Hrac();
-            if (win)
-            {
-
-                Kontrola_t();
-            }
+            
         }
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
@@ -226,24 +192,19 @@ namespace PTA_Projekt
                 if (player == 1)
                 {
                     B5_p.Content = znak_oponent;
-                    B5_p.IsHitTestVisible = false;
 
                 }
                 else
                 {
                     B5_p.Content = znak;
-                    B5_p.IsHitTestVisible = false;
 
                 }
+                    B5_p.IsHitTestVisible = false;
                 F5 = true;
             }
             Kontrola();
             Hrac();
-            if (win)
-            {
-
-                Kontrola_t();
-            }
+            
 
         }
 
@@ -255,24 +216,19 @@ namespace PTA_Projekt
                 if (player == 1)
                 {
                     B6_p.Content = znak_oponent;
-                    B6_p.IsHitTestVisible = false;
 
                 }
                 else
                 {
                     B6_p.Content = znak;
-                    B6_p.IsHitTestVisible = false;
 
                 }
+                    B6_p.IsHitTestVisible = false;
                 F6 = true;
             }
             Kontrola();
             Hrac();
-            if (win)
-            {
-
-                Kontrola_t();
-            }
+           
         }
 
         private void Button_Click_6(object sender, RoutedEventArgs e)
@@ -282,24 +238,19 @@ namespace PTA_Projekt
                 if (player == 1)
                 {
                     B7_p.Content = znak_oponent;
-                    B7_p.IsHitTestVisible = false;
 
                 }
                 else
                 {
                     B7_p.Content = znak;
-                    B7_p.IsHitTestVisible = false;
 
                 }
+                    B7_p.IsHitTestVisible = false;
                 F7 = true;
             }
             Kontrola();
             Hrac(); 
-            if (win)
-            {
-
-                Kontrola_t();
-            }
+            
         }
 
         private void Button_Click_7(object sender, RoutedEventArgs e)
@@ -309,25 +260,20 @@ namespace PTA_Projekt
                 if (player == 1)
                 {
                     B8_p.Content = znak_oponent;
-                    B8_p.IsHitTestVisible = false;
 
                 }
                 else
                 {
                     B8_p.Content = znak;
-                    B8_p.IsHitTestVisible = false;
 
                 }
+                    B8_p.IsHitTestVisible = false;
                 F8 = true;
             }
             Kontrola();
 
             Hrac();
-            if (win)
-            {
-
-                Kontrola_t();
-            }
+           
         }
 
         private void Button_Click_8(object sender, RoutedEventArgs e)
@@ -337,23 +283,18 @@ namespace PTA_Projekt
                 if (player == 1)
                 {
                     B9_p.Content = znak_oponent;
-                    B9_p.IsHitTestVisible = false;
                 }
                 else
                 {
                     B9_p.Content = znak;
-                    B9_p.IsHitTestVisible = false;
 
                 }
+                    B9_p.IsHitTestVisible = false;
                 F9 = true;
             }
             Kontrola();
             Hrac();
-            if (win)
-            {
-
-                Kontrola_t();
-            }
+            
         }
 
         private void Hrac()
@@ -375,6 +316,12 @@ namespace PTA_Projekt
                 znak_L_O.Foreground = Brushes.Black;
             }
 
+
+            if (win)
+            {
+
+                Kontrola_t();
+            }
         }
         
 
@@ -725,7 +672,7 @@ namespace PTA_Projekt
                 P7 = Convert.ToString(B7_p.Content);
                 P8 = Convert.ToString(B8_p.Content);
                 P9 = Convert.ToString(B9_p.Content);
-                string[,] pole = new string[5, 5] { { ".", ".", ".", ".", ".", }, { ".", P1, P2, P3, ".", }, { ".", P4, P5, P6, ".", }, { ".", P7, P8, P9, ".", }, { ".", ".", ".", ".", ".", } };
+                string[,] pole = new string[7, 7] { { ".", ".", ".", ".", ".", ".", "." }, { ".", ".", ".", ".", ".", ".", "."}, { ".", ".", P1, P2, P3, ".", "."}, { ".", ".", P4, P5, P6, ".", "."}, { ".", ".", P7, P8, P9, ".", "."}, { ".", ".", ".", ".", ".", ".", ".", },{ ".", ".", ".", ".", ".", ".", "." } };
 
                 //pole[0, 0] = P1;
                 //pole[1, 0] = P2;
@@ -739,115 +686,15 @@ namespace PTA_Projekt
 
                
 
-                    for (int j = 1; j < 4; j++)
+                    for (int j = 2; j < 5; j++)
                     {
 
-                        for (int k = 1; k < 4; k++)
+                        for (int k = 2; k < 5; k++)
                         {
                             if (pole[j, k] == znak && gbot_vyber == false)
                             {
 
-                                #region prodtrední pole
-                                //if (j == 2 && k == 2 && P5 == znak)
-                                //{
-
-                                //    if (pole[j, k + 1] == znak)
-                                //    {
-                                //        if (pole[j, k - 1] == "")
-                                //        {
-                                //            l = j;
-                                //            n = k - 1;
-                                //            gbot_vyber = true;
-                                //            Tlacitko_3(l, n);
-                                //        }
-
-                                //    }
-                                //    if (pole[j + 1, k + 1] == znak)
-                                //    {
-                                //        if (pole[j - 1, k - 1] == "")
-                                //        {
-                                //            l = j - 1;
-                                //            n = k - 1;
-                                //            gbot_vyber = true;
-                                //            Tlacitko_3(l, n);
-                                //        }
-
-                                //    }
-                                //    if (pole[j + 1, k] == znak)
-                                //    {
-                                //        if (pole[j - 1, k] == "")
-                                //        {
-                                //            l = j - 1;
-                                //            n = k;
-                                //            gbot_vyber = true;
-                                //            Tlacitko_3(l, n);
-                                //        }
-
-                                //    }
-                                //    if (pole[j + 1, k - 1] == znak)
-                                //    {
-                                //        if (pole[j - 1, k + 1] == "")
-                                //        {
-                                //            l = j - 1;
-                                //            n = k + 1;
-                                //            gbot_vyber = true;
-                                //            Tlacitko_3(l, n);
-                                //        }
-
-                                //    }
-                                //    if (pole[j, k - 1] == znak)
-                                //    {
-                                //        if (pole[j, k + 1] == "")
-                                //        {
-                                //            l = j;
-                                //            n = k + 1;
-                                //            gbot_vyber = true;
-                                //            Tlacitko_3(l, n);
-                                //        }
-
-                                //    }
-                                //    if (pole[j - 1, k - 1] == znak)
-                                //    {
-                                //        if (pole[j + 1, k + 1] == "")
-                                //        {
-                                //            l = j + 1;
-                                //            n = k + 1;
-                                //            gbot_vyber = true;
-                                //            Tlacitko_3(l, n);
-                                //        }
-
-                                //    }
-                                //    if (pole[j - 1, k] == znak)
-                                //    {
-                                //        if (pole[j + 1, k] == "")
-                                //        {
-                                //            l = j + 1;
-                                //            n = k;
-                                //            gbot_vyber = true;
-                                //            Tlacitko_3(l, n);
-                                //        }
-
-                                //    }
-                                //    if (pole[j - 1, k + 1] == znak)
-                                //    {
-                                //        if (pole[j + 1, k - 1] == "")
-                                //        {
-                                //            l = j + 1;
-                                //            n = k - 1;
-                                //            gbot_vyber = true;
-                                //            Tlacitko_3(l, n);
-                                //        }
-
-                                //    }
-
-
-
-
-                                //}
-                                //else
-                                //{
-
-                                #endregion
+                              
 
 
 
@@ -959,25 +806,141 @@ namespace PTA_Projekt
 
 
 
+                for (int j = 2; j < 5; j++)
+                {
 
-
-
-
-
-
-
-
-
-
-
-
-
-                    if (gbot_vyber == false)
+                    for (int k = 2; k < 5; k++)
                     {
-                        for (int j = 1; j < 4; j++)
+                        if (pole[j, k] == znak && gbot_vyber == false)
                         {
 
-                            for (int k = 1; k < 4; k++)
+
+
+
+
+                            if (pole[j, k + 2] == znak && gbot_vyber == false)
+                            {
+                                if (pole[j, k + 1] == "")
+                                {
+                                    l = j;
+                                    n = k + 1;
+                                    gbot_vyber = true;
+                                    Tlacitko_3(l, n);
+                                }
+
+                            }
+                            else if (pole[j + 2, k + 2] == znak && gbot_vyber == false)
+                            {
+                                if (pole[j + 1, k + 1] == "")
+                                {
+                                    l = j + 1;
+                                    n = k + 1;
+                                    gbot_vyber = true;
+                                    Tlacitko_3(l, n);
+                                }
+
+                            }
+                            else if (pole[j + 2, k] == znak && gbot_vyber == false)
+                            {
+                                if (pole[j + 1, k] == "")
+                                {
+                                    l = j + 1;
+                                    n = k;
+                                    gbot_vyber = true;
+                                    Tlacitko_3(l, n);
+                                }
+
+                            }
+                            else if (pole[j + 2, k - 2] == znak && gbot_vyber == false)
+                            {
+                                if (pole[j + 1, k - 1] == "")
+                                {
+                                    l = j + 1;
+                                    n = k - 1;
+                                    gbot_vyber = true;
+                                    Tlacitko_3(l, n);
+                                }
+
+                            }
+                            else if (pole[j, k - 2] == znak && gbot_vyber == false)
+                            {
+                                if (pole[j, k - 1] == "")
+                                {
+                                    l = j;
+                                    n = k - 1;
+                                    gbot_vyber = true;
+                                    Tlacitko_3(l, n);
+                                }
+
+                            }
+                            else if (pole[j - 2, k - 2] == znak && gbot_vyber == false)
+                            {
+                                if (pole[j - 1, k - 1] == "")
+                                {
+                                    l = j - 1;
+                                    n = k - 1;
+                                    gbot_vyber = true;
+                                    Tlacitko_3(l, n);
+                                }
+
+                            }
+                            else if (pole[j - 2, k] == znak && gbot_vyber == false)
+                            {
+                                if (pole[j - 1, k] == "")
+                                {
+                                    l = j - 1;
+                                    n = k;
+                                    gbot_vyber = true;
+                                    Tlacitko_3(l, n);
+                                }
+
+                            }
+                            else if (pole[j - 2, k + 2] == znak && gbot_vyber == false)
+                            {
+                                if (pole[j - 1, k + 1] == "")
+                                {
+                                    l = j - 1;
+                                    n = k + 1;
+                                    gbot_vyber = true;
+                                    Tlacitko_3(l, n);
+                                }
+
+                            }
+
+
+
+                            //}
+
+
+                        }
+
+
+
+
+                    }
+
+
+
+
+                }
+
+
+
+
+
+
+
+
+
+
+
+
+                if (gbot_vyber == false)
+                {
+                        for (int j = 2; j < 5; j++)
+                        {
+
+                            for (int k = 2; k < 5; k++)
                             {
                                 if (pole[j, k] == znak_oponent && gbot_vyber == false)
                                 {
@@ -1188,7 +1151,127 @@ namespace PTA_Projekt
 
 
                         }
+
+
+                    for (int j = 2; j < 5; j++)
+                    {
+
+                        for (int k = 2; k < 5; k++)
+                        {
+                            if (pole[j, k] == znak_oponent && gbot_vyber == false)
+                            {
+
+
+
+
+
+                                if (pole[j, k + 2] == znak_oponent && gbot_vyber == false)
+                                {
+                                    if (pole[j, k + 1] == "")
+                                    {
+                                        l = j;
+                                        n = k + 1;
+                                        gbot_vyber = true;
+                                        Tlacitko_3(l, n);
+                                    }
+
+                                }
+                                else if (pole[j + 2, k + 2] == znak_oponent && gbot_vyber == false)
+                                {
+                                    if (pole[j + 1, k + 1] == "")
+                                    {
+                                        l = j + 1;
+                                        n = k + 1;
+                                        gbot_vyber = true;
+                                        Tlacitko_3(l, n);
+                                    }
+
+                                }
+                                else if (pole[j + 2, k] == znak_oponent && gbot_vyber == false)
+                                {
+                                    if (pole[j + 1, k] == "")
+                                    {
+                                        l = j + 1;
+                                        n = k;
+                                        gbot_vyber = true;
+                                        Tlacitko_3(l, n);
+                                    }
+
+                                }
+                                else if (pole[j + 2, k - 2] == znak_oponent && gbot_vyber == false)
+                                {
+                                    if (pole[j + 1, k - 1] == "")
+                                    {
+                                        l = j + 1;
+                                        n = k - 1;
+                                        gbot_vyber = true;
+                                        Tlacitko_3(l, n);
+                                    }
+
+                                }
+                                else if (pole[j, k - 2] == znak_oponent && gbot_vyber == false)
+                                {
+                                    if (pole[j, k - 1] == "")
+                                    {
+                                        l = j;
+                                        n = k - 1;
+                                        gbot_vyber = true;
+                                        Tlacitko_3(l, n);
+                                    }
+
+                                }
+                                else if (pole[j - 2, k - 2] == znak_oponent && gbot_vyber == false)
+                                {
+                                    if (pole[j - 1, k - 1] == "")
+                                    {
+                                        l = j - 1;
+                                        n = k - 1;
+                                        gbot_vyber = true;
+                                        Tlacitko_3(l, n);
+                                    }
+
+                                }
+                                else if (pole[j - 2, k] == znak_oponent && gbot_vyber == false)
+                                {
+                                    if (pole[j - 1, k] == "")
+                                    {
+                                        l = j - 1;
+                                        n = k;
+                                        gbot_vyber = true;
+                                        Tlacitko_3(l, n);
+                                    }
+
+                                }
+                                else if (pole[j - 2, k + 2] == znak_oponent && gbot_vyber == false)
+                                {
+                                    if (pole[j - 1, k + 1] == "")
+                                    {
+                                        l = j - 1;
+                                        n = k + 1;
+                                        gbot_vyber = true;
+                                        Tlacitko_3(l, n);
+                                    }
+
+                                }
+
+
+
+                                //}
+
+
+                            }
+
+
+
+
+                        }
+
+
+
+
                     }
+
+                }
 
                     if (gbot_vyber == false)
                     {
@@ -1264,55 +1347,55 @@ namespace PTA_Projekt
             
 
             
-            if (l == 1 && n == 1 && F1 == false)
+            if (l == 2 && n == 2 && F1 == false)
             {
                 B1_p.Content = znak;
                 F1 = true;
                 B1_p.IsHitTestVisible = false;
             }
-            else if (l == 1 && n == 2 && F2 == false)
+            else if (l == 2 && n == 3 && F2 == false)
             {
                 F2 = true;
                 B2_p.IsHitTestVisible = false;
             B2_p.Content = znak;
             }
-            else if (l == 1 && n == 3 && F3 == false)
+            else if (l == 2 && n == 4 && F3 == false)
             {
                 F3 = true;
                 B3_p.IsHitTestVisible = false;
                 B3_p.Content = znak;
             }
-            else if (l == 2 && n == 1 && F4 == false)
+            else if (l == 3 && n == 2 && F4 == false)
             {
                 F4 = true;
                 B4_p.IsHitTestVisible = false;
                 B4_p.Content = znak;
             }
-            else if (l == 2 && n == 2 && F5== false)
+            else if (l == 3 && n == 3 && F5== false)
             {
                 F5 = true;
                 B5_p.IsHitTestVisible = false;
                 B5_p.Content = znak;
             }
-            else if (l == 2 && n == 3 && F6== false)
+            else if (l == 3 && n == 4 && F6== false)
             {
                 F6 = true;
                 B6_p.IsHitTestVisible = false;
                 B6_p.Content = znak;
             }
-            else if (l == 3 && n == 1 && F7 == false)
+            else if (l == 4 && n == 2 && F7 == false)
             {
                 F7 = true;
                 B7_p.IsHitTestVisible = false;
                 B7_p.Content = znak;
             }
-            else if (l == 3 && n == 2 && F8 == false)
+            else if (l == 4 && n == 3 && F8 == false)
             {
                 F8 = true;
                 B8_p.IsHitTestVisible = false;
                 B8_p.Content = znak;
             }
-            else if (l == 3 && n == 3 && F9 == false)
+            else if (l == 4 && n == 4 && F9 == false)
             {
                 F9 = true;
                 B9_p.IsHitTestVisible = false;

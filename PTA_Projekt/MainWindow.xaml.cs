@@ -28,14 +28,14 @@ namespace PTA_Projekt
     {
         public static int win_b = 0;
         public static int win_g = 0;
-        
+        public int obr = 0;
 
         public string[] adresy = { "/OBR/1.png", "/OBR/2.png", "/OBR/3.jpg", "/OBR/4.png", "/OBR/5.jpg" };
 
 
         const string Path = "MyDB.xml";
-        public int[] pole = new int[2];
-
+        
+         public int[] pole = new int[2];
         
 
 
@@ -46,7 +46,7 @@ namespace PTA_Projekt
 
             OBRAZ();
 
-            this.Closed += (s, e) => SaveData();
+            
             this.Loaded += (s, e) =>
             {
                 LoadData();
@@ -69,19 +69,24 @@ namespace PTA_Projekt
 
         private void SaveData()
         {
-            pole[0] = win_b;
-            pole[1] = win_g;
+
+            pole[0]= win_b;
+            pole[1] = win_g; 
             
+
 
 
             try
             {
-                XmlSerializer serializer = new XmlSerializer(pole.GetType());
+                XmlSerializer statistic = new XmlSerializer(pole.GetType());
 
                 using (StreamWriter sw = new StreamWriter(Path))
                 {
-                    serializer.Serialize(sw, pole);
+                    statistic.Serialize(sw, pole);
+                    
+
                 }
+               
             }
 
             catch (Exception e1)
@@ -96,23 +101,27 @@ namespace PTA_Projekt
             {
                 if (File.Exists(Path))
                 {
-                    XmlSerializer serializer = new XmlSerializer(pole.GetType());
+                    XmlSerializer statistic = new XmlSerializer(pole.GetType());
+                    
+
                     using (StreamReader sr = new StreamReader(Path))
                     {
-                        pole = (int[])serializer.Deserialize(sr)!;
+                        pole = (int[])statistic.Deserialize(sr)!;
                         win_b = pole[0];
                         win_g = pole[1];
                         
-                        
+
                     }
+                    
                 }
                 else
-                    throw new Exception($"Soubor {Path} nenalezen!");
+                    throw new Exception($"Welcome in TIC-TAC-TOE");
             }
 
             catch (Exception e)
             {
                 MessageBox.Show(e.Message);
+                
             }
         }
 
@@ -161,6 +170,7 @@ namespace PTA_Projekt
         {
             Nastaveni n = new Nastaveni();
             n.ShowDialog();
+            OBRAZ();
         }
     }
 }
